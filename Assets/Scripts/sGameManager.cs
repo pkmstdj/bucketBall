@@ -25,7 +25,7 @@ public class sGameManager : MonoBehaviour
                     case TouchPhase.Began: { // 터치 시작한 경우
                         if(!EventSystem.current.IsPointerOverGameObject(Input.GetTouch(i).fingerId)) { // UI 버튼 누른거 제외하고
                             GameObject ball = Instantiate(BallPrefeb, Camera.main.transform.position, Camera.main.transform.rotation) as GameObject; // 공 생성
-                            ball.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 200); // 카메라 방향으로 발사
+                            ball.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 200); // 카메라 방향 200의 힘으로 발사
                         }
                         break;
                     }
